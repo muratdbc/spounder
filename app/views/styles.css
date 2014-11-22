@@ -1,0 +1,38 @@
+div span{
+
+	position: absolute;	
+}
+
+.box {
+	
+    width: 30em;
+    height: 4em;
+    background-color: #ffffff;
+
+}
+
+
+.swipe_right {
+	
+    width: 30em;
+    height: 4em;
+    background-color: #1ff0a0;
+
+}
+
+
+.swipe_left {
+	
+    width: 30em;
+    height: 4em;
+    background-color: #ff1199;
+
+}
+
+
+
+.footer {
+	position: fixed;
+	bottom: 0px;	
+
+}

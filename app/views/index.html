@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Include meta tag to ensure proper rendering and touch zooming -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Include jQuery Mobile stylesheets -->
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+  <script src="styles.css"></script>
+
+
+</head>
+<body>
+
+
+
+
+
+<div data-role="page" id="pageone" class="header">
+  <div data-role="header">
+    <h1>Spounder</h1>
+  </div>
+
+
+ <script> 
+
+$(function(){
+  // Bind the swipeHandler callback function to the swipe event on div.box
+  $( ".box" ).on( "swipeleft", swipeleftHandler );
+ 
+  // Callback function references the event target and adds the 'swipe' class to it
+  function swipeleftHandler( event ){
+    $( event.target ).removeClass("swipe_right").addClass( "swipe_left" );
+  }
+  
+
+  $( ".box" ).on( "swiperight", swiperightHandler );
+
+  function swiperightHandler( event ){
+    $( event.target ).removeClass("swipe_left").addClass( "swipe_right" );
+  }
+
+
+
+//FROM API - To Be Replaced
+
+var code="2IWw5tDMzgtUyAT4EwKAYW"
+
+frameReplace="<iframe src='https://embed.spotify.com/?uri=spotify:track:" + code + "' width='300' height='80' frameborder='0' allowtransparency='true'></iframe>"
+
+$(".randomsong1").html(frameReplace)
+$(".randomsong2").html(frameReplace)
+$(".randomsong3").html(frameReplace)
+$(".randomsong4").html(frameReplace)
+
+});
+
+
+
+
+</script>
+
+<div data-role="main" class="ui-content box" >
+  <span class="randomsong1">
+    <!-- <iframe src="https://embed.spotify.com/?uri=spotify:track:7tXuhFVN7ETTiDD8qAtzWb" width="300" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+  </span>
+</div>
+
+<div data-role="main" class="ui-content box" >
+  <span class="randomsong2">
+   <!--  <iframe src="https://embed.spotify.com/?uri=spotify:track:3VxLqVKyWp3KL0MTzZKUCM" width="300" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+  </span>
+</div>
+
+<div data-role="main" class="ui-content box" >
+  <span class="randomsong3">
+  <!--   <iframe src="https://embed.spotify.com/?uri=spotify:track:12TyU7JblI0e8WhMTck8bF" width="300" height="80" frameborder="0" allowtransparency="true"></iframe> -->
+  </span>
+</div>
+
+<div data-role="main" class="ui-content box" >
+  <span class="randomsong4" >
+    
+  </span>
+</div>
+
+
+
+  <div data-role="footer" class="footer">
+    <h1>Settings</h1>
+  </div>
+</div> 
+
+</body>
+</html>
